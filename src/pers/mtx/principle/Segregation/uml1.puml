@@ -1,27 +1,18 @@
 @startuml
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-AbstractList <-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+interface Interface1{
+operation1():void
+operation2():void
+operation3():void
+operation4():void
+operation5():void
 }
-
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
-
+class C
+class A
+class B
+class D
+Interface1 <|.. B
+Interface1 <|.. D
+Interface1 <.. A
+Interface1 <.. C
 @enduml
