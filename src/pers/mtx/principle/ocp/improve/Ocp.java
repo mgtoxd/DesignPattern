@@ -32,9 +32,6 @@ abstract class Shape {
 }
 
 class Rectangle extends Shape {
-    Rectangle() {
-        super.m_type = 1;
-    }
 
     @Override
     public void draw() {
@@ -43,9 +40,7 @@ class Rectangle extends Shape {
 }
 
 class Circle extends Shape {
-    Circle() {
-        super.m_type = 2;
-    }
+
     @Override
     public void draw() {
         System.out.println("绘制圆形");
@@ -54,11 +49,17 @@ class Circle extends Shape {
 
 //新增画三角形
 class Triangle extends Shape {
-    Triangle() {
-        super.m_type = 3;
-    }
+
     @Override
     public void draw() {
         System.out.println("绘制三角形");
+    }
+}
+
+class OtherGraphic extends Shape{
+
+    @Override
+    public void draw() {
+        System.out.println("绘制其他图形");
     }
 }
