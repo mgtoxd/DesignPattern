@@ -1,0 +1,27 @@
+@startuml
+
+class A{
+oper1():void
+oper2():void
+oper3():void
+}
+class B
+A <|--B
+note right on link : 如果我们只是让B类使用A类的方法使用继承会让B和A的耦合性增强
+
+class B1{
+oper1(A a):void
+}
+B1<.A
+
+class B2{
+a:A
+setA(a:A):void
+}
+B2 o- A
+
+class B3{
+a:A = new A()
+}
+B3 *-- A
+@enduml
