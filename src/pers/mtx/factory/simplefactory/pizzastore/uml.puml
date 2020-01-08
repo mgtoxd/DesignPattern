@@ -16,11 +16,18 @@ class OrderPizza
 
 class PepperPizza
 
-OrderPizza..>CheesePizza
-OrderPizza..>GreekPizza
-OrderPizza..>Pizza
+class SimplFactory
+
+class OrderPizza2
+
+class OrderPizza3
+
+OrderPizza o-- SimplFactory
+OrderPizza2 o-- SimplFactory
+OrderPizza3 o-- SimplFactory
 
 
 GreekPizza --|>Pizza
 CheesePizza --|>Pizza
+PepperPizza --|>Pizza
 @enduml
