@@ -1,0 +1,31 @@
+@startuml
+
+class House
+
+note left of House :dad
+
+class HouseBuilder{
+house:House = new House;
+buildBasic():void
+buildWalls():void
+roofed():void
+build():House
+}
+
+CommonHouse --|>HouseBuilder
+HighBuilding --|> HouseBuilder
+
+class HouseDirector{
+houseBuilder:HouseBuilder
+}
+
+House --*HouseBuilder
+
+HouseDirector o--HouseBuilder
+
+
+client ..>HouseDirector
+client ..>CommonHouse
+client ..>HighBuilding
+
+@enduml

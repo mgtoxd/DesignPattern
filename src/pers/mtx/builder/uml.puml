@@ -1,0 +1,17 @@
+@startuml
+
+abstract House{
+buildBasic():void
+buildWalls():void
+roofed():void
+build():void
+}
+
+CommonHouse--|>House
+HighBuilding--|>House
+
+
+Cient ..> CommonHouse
+Cient ..> HighBuilding
+
+@enduml
