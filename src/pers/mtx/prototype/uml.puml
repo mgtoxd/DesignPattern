@@ -1,0 +1,10 @@
+@startuml
+
+class Sheep{
+name:String
+age:int
+}
+
+Client ..> Sheep
+
+@enduml
