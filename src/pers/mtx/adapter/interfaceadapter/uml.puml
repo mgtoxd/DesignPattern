@@ -1,0 +1,18 @@
+@startuml
+
+interface Interface4{
+operation1():void
+operation2():void
+operation3():void
+operation4():void
+}
+
+AbsAdapter..|>Interface4
+
+note "AbsAdapter类抽象类默认实现接口的所有方法" as N1
+
+AbsAdapter--N1
+
+A..>AbsAdapter
+
+@enduml
