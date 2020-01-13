@@ -1,0 +1,15 @@
+@startuml
+
+class OrganizationComponet{
+add():void
+remove():void
+print():void
+}
+
+College-|>OrganizationComponet
+Department-|>OrganizationComponet
+University-|>OrganizationComponet
+University o-- College
+College o-- Department
+Client.>OrganizationComponet
+@enduml
